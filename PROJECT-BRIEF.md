@@ -14,6 +14,8 @@ Tools like ChatGPT are powerful but assume you know how to ask. Older adults oft
 
 - **Primary user:** an adult 65+ who may have limited tech confidence, possibly reduced vision or dexterity, and who wants help with everyday things (messages, reminders, understanding their phone, company).
 - **Secondary user:** their adult children / family, who want their parent to have safe, friendly help and peace of mind.
+- **Launch market (decided Sep 2026):** the **United States**, in **US English**. Use US spelling, US date and 12-hour time formats, `$` pricing, and **911** for emergencies.
+- **Name:** "Biscuit" is a **working title**. In the US a biscuit is a savory bread roll, so the name reads British; a final US-friendly name will be chosen before public launch.
 
 ## What it is (in one screen)
 
