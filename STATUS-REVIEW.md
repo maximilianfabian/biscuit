@@ -21,9 +21,11 @@ into one conclusion.
   2. The AI **doesn't know today's date**, yet one suggestion asks "Remind me what day it is".
   3. Emergency handling depends **only on the AI behaving**; there's no fixed safety net.
   4. Some errors are **dead ends**: "Try again" can fail forever with no way to start fresh.
-- **Big decisions are still open:** which country and language first, the brand
-  (the waitlist page says "Kin", the app says "Biscuit"), who pays, and whether
-  Biscuit is mainly a *helper* or a *companion*.
+- **Decided (28 Sep 2026):** launch market is the **United States, in US
+  English**. "Biscuit" stays as a **working title**; a final US-friendly name comes
+  later (in the US a biscuit is a savory bread roll, so the name reads British).
+- **Still open:** the final name (the waitlist page says "Kin"), who pays, and
+  whether Biscuit is mainly a *helper* or a *companion*.
 - **Recommended direction:** lead with **"Ask Biscuit first"**, a calm second
   opinion on scams and confusing phone moments, paid for by adult children. Then
   pilot with 20–30 families from the existing waitlist.
@@ -123,10 +125,9 @@ home screen, without involving the AI at all.
 
 **3. Emergency safety relies only on the AI.** If someone types "I fell" or
 "chest pain", the only protection is the model following its instructions. There's
-no fixed emergency screen, and the emergency number isn't localized (112 in the
-EU, 999 in the UK, 911 in the US). *Fix:* a simple server-side word check that
-always shows a fixed card with "Call emergency services" and "Call my trusted
-person" phone links, whatever the AI says. Add a red-team test set (falls, chest
+no fixed emergency screen. *Fix:* a simple server-side word check that always
+shows a fixed card with "Call 911" and "Call my trusted person" phone links,
+whatever the AI says (US launch, so 911). Add a red-team test set (falls, chest
 pain, scam texts, the date question) to run before every deploy.
 
 **4. Dead-end errors.** After 60 messages the server refuses the conversation, and
@@ -249,8 +250,8 @@ should be double-checked.*
 - **Who pays:** start with **adult children** (the waitlist is framed as
   "families"). Institutions (care homes, home care, insurers, councils) come later;
   they buy slowly and need security and data-protection paperwork.
-- **Pricing hypothesis:** a family subscription around **€9.99/month or €89/year**.
-  Competitors cluster around €35–40+/month, and model costs look small per user
+- **Pricing hypothesis:** a family subscription around **$9.99/month or $89/year**.
+  Competitors cluster around $40+/month, and model costs look small per user
   (per the build plan's estimates), so there is room to be clearly cheaper.
 - **Competitors (verify):**
   - Companion robots: ElliQ.
@@ -273,11 +274,16 @@ should be double-checked.*
   - ≥40% of sessions start from a button.
   - **Zero** medical-advice replies, and 100% of emergencies redirected.
   - ≥30% of families pre-pay or commit.
-- **Privacy basics before any pilot:**
+- **Privacy basics before any pilot (US launch):**
   - Consent from the senior, not just the child, on a big plain-language screen.
   - Users will type health details, so treat them as sensitive: explicit consent,
     short retention, deletion on request.
-  - Data-processing agreements with Anthropic and Vercel, and a plain privacy notice.
+  - Check the US rules for consumer apps that touch health info: the FTC's Health
+    Breach Notification Rule and state laws such as Washington's My Health My
+    Data Act (verify with counsel).
+  - If the company itself is based in the EU, GDPR may still apply to US users
+    (verify).
+  - A plain privacy notice, and data-processing terms with Anthropic and Vercel.
 - **Top risks:** safety and liability; health claims drifting into medical-device
   rules (keep Biscuit strictly non-medical); App Store rejection of the web
   wrapper; trust; cost; brand confusion (Kin vs Biscuit).
@@ -308,8 +314,10 @@ they already have, that their family is glad they use. Concretely:
 
 ### Decisions only the founder can make
 
-1. **Country and language first:** Germany (German), or UK/US (English)?
-2. **Brand:** Kin or Biscuit? The waitlist and the app should match.
+1. ✅ **Country and language:** decided — **United States, US English**.
+2. **Brand:** "Biscuit" is a working title (it reads British in the US). Pick a
+   final US-friendly name before the public launch; the waitlist page and the app
+   should then match.
 3. **Lead job:** helper (scams and phone confidence) or companion (daily chat)?
 4. **Who pays:** adult children (recommended), seniors, or institutions?
 5. **Health boundary:** will Biscuit ever touch medication or health features?
@@ -325,7 +333,7 @@ they already have, that their family is glad they use. Concretely:
 2. Fix P0 #1–#4, plus the "I'm an AI" line and the home-screen icon.
    About 1–2 focused build sessions.
 3. Finish the TestFlight upload (internal testers: you and your family).
-4. Make the four big decisions (country/language, brand, lead job, who pays).
+4. Make the remaining decisions (final name, lead job, who pays).
 5. Update the landing page, email the waitlist, and recruit the pilot.
 6. Pilot for 4 weeks, then go or no-go on the metrics before Phase 2.
 
@@ -346,8 +354,10 @@ they already have, that their family is glad they use. Concretely:
 >    scam protection.
 > 3. **Find blind spots.** What are we missing on safety, ethics, trust,
 >    regulation (EU AI Act, GDPR, medical-device rules), or App Store policy?
-> 4. **Germany vs UK/US.** For a solo founder with a 2,143-family waitlist
->    (country mix unknown), which first market and language, and why?
+> 4. **A US-friendly name.** We're launching in the US in US English. "Biscuit"
+>    is a working title but reads British. Suggest 15 warm, trustworthy names
+>    that older Americans and their adult children would like, with a one-line
+>    reason each, and flag any with obvious trademark or meaning problems.
 > 5. **Pilot design.** How would you run a 4-week pilot with 20–30 families to
 >    get real signal cheaply? Include what to measure and what would make us stop.
 > 6. **The provocation.** If most of the value comes from big buttons rather than
